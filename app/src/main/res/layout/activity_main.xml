@@ -46,11 +46,11 @@
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/history"
+            android:id="@+id/attendence"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="History"
+            android:text="Attendence"
             android:backgroundTint="#ffdd00"
             android:textColor="@color/black" />
 
