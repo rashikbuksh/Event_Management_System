@@ -23,7 +23,7 @@ public class myattendence extends AppCompatActivity {
     private Button btnExit;
     ExecutorService executorService = Executors.newSingleThreadExecutor();
     Handler handler = new Handler(Looper.getMainLooper());
-    private String URL = "http://www.muthosoft.com/univ/attendance/report.php";
+    private String URL = "https://www.muthosoft.com/univ/attendance/report.php";
     // Reference objects for handling event lists
     private WebView web;
     String data;
@@ -57,7 +57,9 @@ public class myattendence extends AppCompatActivity {
             handler.post(()->{
                 if(data != null){
                     try{
-                        web.loadData(data,"text/html","UTF-8");
+                        System.out.println("data"+data);
+                        web.loadDataWithBaseURL(null,data,"text/html","UTF-8",null);
+                        //web.loadData(data,"text/html","UTF-8");
                     }
                     catch(Exception e){
                         e.printStackTrace();

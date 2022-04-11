@@ -53,8 +53,7 @@ public class JSONParser {
 				sb.append(line + "\n");
 			}
 			is.close();
-			System.out.println("URL: "+sb.toString());
-			return url.toString();
+			return sb.toString();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
